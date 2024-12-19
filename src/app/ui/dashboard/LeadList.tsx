@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import Modal from "./modal";
 import { leadData } from "@/app/lib/placeholder-data";
 import LeadModal from "./lead-modal";
+import { LeadDetails } from "@/app/lib/definitions";
 
 
-const LeadsList = ({ lead,index }) => {
+interface LeadListProps{
+  lead: LeadDetails
+  index:number
+}
+
+const LeadsList:React.FC<LeadListProps> = ({ lead,index }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     
     const [selectedLead, setSelectedLead] = useState(0);

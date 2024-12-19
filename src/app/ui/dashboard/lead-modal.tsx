@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-interface LeadDetails {
+export interface LeadDetails {
   name: string;
   role: string;
   profileImage: string;

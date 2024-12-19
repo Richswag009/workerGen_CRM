@@ -18,7 +18,9 @@ export type Invoice = {
   
 
   export interface LeadDetails {
+    id:number
     name: string;
+    status: string;
     role: string;
     profileImage: string;
     insights: {
