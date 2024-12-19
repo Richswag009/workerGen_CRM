@@ -43,7 +43,7 @@ export const people = [
   },
   {
     name: "Alex Baker",
-    topic: "Premium coffee beans",
+  topic: "Cafe A100 bulk rate",
     status: "New",
     createdOn: "3/17/2024 8:00 AM",
   },
@@ -67,6 +67,8 @@ export const leadData = [
       id: 1,
       name: "Jane Reyes",
       role: "COO, Northwind Traders",
+      topic: "Cafe A100 for commercial use",
+      status: "New",
       profileImage: "https://via.placeholder.com/150",
       insights: {
         decisionMaker: "Yes",
@@ -83,6 +85,8 @@ export const leadData = [
     {
       id: 2,
       name: "Allen Munger",
+      topic: "Improving cost per cup",
+      status: "New",
       role: "Head of Real Estate Development, Contoso Coffee",
       profileImage: "https://via.placeholder.com/150",
       insights: {
@@ -100,6 +104,8 @@ export const leadData = [
     {
       id: 3,
       name: "Emily Tran",
+      topic: "Cafe A100 bulk rate",
+      status: "New",
       role: "Procurement Manager, Litbean Coffee",
       profileImage: "https://via.placeholder.com/150",
       insights: {
@@ -117,6 +123,8 @@ export const leadData = [
     {
       id: 4,
       name: "Carlos Jimenez",
+      topic: "Cafe A100 bulk rate",
+      status: "New",
       role: "Director of Operations, Brewed Bliss",
       profileImage: "https://via.placeholder.com/150",
       insights: {
@@ -134,6 +142,8 @@ export const leadData = [
     {
       id: 5,
       name: "Sophia Williams",
+      topic: "Cafe A100 bulk rate",
+      status: "New",
       role: "CEO, Urban Bean Co.",
       profileImage: "https://via.placeholder.com/150",
       insights: {

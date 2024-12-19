@@ -12,28 +12,7 @@ const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentLeadIndex, setCurrentLeadIndex] = useState(0);
 
-  const handleOpenModal = (index: number) => {
-    setCurrentLeadIndex(index);
-    setIsModalOpen(true);
-  };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleNext = () => {
-    setCurrentLeadIndex((prevIndex) =>
-      prevIndex === leadData.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrevious = () => {
-    setCurrentLeadIndex((prevIndex) =>
-      prevIndex === 0 ? leadData.length - 1 : prevIndex - 1
-    );
-  };
-
-  const currentLead = leadData[currentLeadIndex];
 
   return (
     <div className="p-6 border rounded-lg font-sans ">

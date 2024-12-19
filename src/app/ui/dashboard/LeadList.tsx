@@ -11,8 +11,8 @@ interface LeadListProps{
 }
 
 const LeadsList:React.FC<LeadListProps> = ({ lead,index }) => {
+  
     const [isModalOpen, setIsModalOpen] = useState(false);
-    
     const [selectedLead, setSelectedLead] = useState(0);
 
     const openModal = () => setIsModalOpen(true);
