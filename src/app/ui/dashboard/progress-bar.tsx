@@ -33,9 +33,9 @@ const ProgressBar = () => {
   return (
     <div className="  bg-white rounded-lg">
     {/* Header */}
-    <div className="flex justify-between items-center">
+    <div className="flex text-xs justify-between items-center">
       <span className="text-sm text-gray-500">1 month until Q4 ends</span>
-      <span className="text-sm font-semibold text-gray-800">
+      <span className="text-xs font-semibold text-gray-800">
         Target <span className="text-black">${target} million</span>
       </span>
       <span className="text-sm text-gray-500">
@@ -58,17 +58,17 @@ const ProgressBar = () => {
     </div>
   
     {/* Legend */}
-    <div className="flex flex-wrap justify-between bg-white text-sm text-gray-600 gap-1">
+    <div className="flex flex-wrap text-sm text-gray-600 gap-1">
       {progressData.map((segment, index) => (
         <div
           key={index}
-          className="flex items-center space-x-2 bg-gray-50 py-1 px-2 rounded-md shadow-sm"
+          className="flex items-center py-1 px-1 space-x-1  text-xs"
         >
           <span
-            className="w-4 h-4 rounded-full"
+            className="w-2 h-2 rounded-full"
             style={{ backgroundColor: segment.color }}
           ></span>
-          <span className="font-medium">
+          <span className=" text-xs font-medium">
             {segment.label} - ${segment.value}m
           </span>
         </div>

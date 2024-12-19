@@ -22,6 +22,8 @@ export type Invoice = {
     name: string;
     status: string;
     role: string;
+    // description: string;
+    topic: string;
     profileImage: string;
     insights: {
       decisionMaker: string;
