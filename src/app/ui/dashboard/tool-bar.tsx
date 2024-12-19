@@ -11,7 +11,6 @@ import {
 const Toolbar = () => {
   return (
     <div className="flex items-center justify-between bg-white mb-4 p-2 border rounded shadow">
-      {/* Left Section */}
       <div className="flex items-center gap-4">
         {/* Dropdown */}
         <div>
@@ -26,24 +25,24 @@ const Toolbar = () => {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-2">
-          <button className="flex items-center gap-1 text-gray-600 hover:text-blue-500">
-            <ChartBarIcon className="h-5 w-5" />
+          <button className="flex text-sm items-center gap-1 text-gray-600 hover:text-blue-500">
+            <ChartBarIcon className="h-3 w-3" />
             Show chart
           </button>
-          <button className="flex items-center gap-1 text-gray-600 hover:text-blue-500">
-            <ViewColumnsIcon className="h-5 w-5" />
+          <button className="flex text-sm items-center gap-1 text-gray-600 hover:text-blue-500">
+            <ViewColumnsIcon className="h-3 w-3" />
             Focused view
           </button>
-          <button className="flex items-center gap-1 text-gray-600 hover:text-blue-500">
-            <PlusIcon className="h-5 w-5" />
+          <button className="flex text-sm items-center gap-1 text-gray-600 hover:text-blue-500">
+            <PlusIcon className="h-3 w-3" />
             New
           </button>
-          <button className="flex items-center gap-1 text-gray-600 hover:text-blue-500">
-            <ReceiptRefundIcon className="h-5 w-5" />
+          <button className="flex text-sm items-center gap-1 text-gray-600 hover:text-blue-500">
+            <ReceiptRefundIcon className="h-3 w-3" />
             Refresh
           </button>
-          <button className="flex items-center gap-1 text-gray-600 hover:text-blue-500">
-            <TrashIcon className="h-5 w-5" />
+          <button className="flex text-sm items-center gap-1 text-gray-600 hover:text-blue-500">
+            <TrashIcon className="h-3 w-3" />
             Delete
           </button>
         </div>
@@ -63,7 +62,7 @@ const Toolbar = () => {
 
         {/* Search Bar */}
         <div className="relative">
-          <GlobeAmericasIcon className="absolute left-2 top-2.5 h-5 w-5 text-gray-400" />
+          <GlobeAmericasIcon className="absolute left-2 top-2.5 h-3 w-3 text-gray-400" />
           <input
             type="text"
             placeholder="Search..."
