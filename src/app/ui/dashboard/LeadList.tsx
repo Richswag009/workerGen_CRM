@@ -65,15 +65,14 @@ const LeadsList: React.FC<LeadListProps> = ({ lead, index }) => {
         </span>
       </div>
 
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
         <LeadModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           lead={currentLead}
           handleNext={handleNext}
+          selectedLead={selectedLead}
           handlePrevious={handlePrevious}
         />
-      </Modal>
     </>
   );
 };

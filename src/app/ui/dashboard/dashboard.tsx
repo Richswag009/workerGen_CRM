@@ -14,7 +14,7 @@ const Dashboard = () => {
   const [currentLeadIndex, setCurrentLeadIndex] = useState(0);
 
   return (
-    <div className="py-2 px-4 border-2 rounded-lg font-sans  border-t-[blue] border-r-[purple] border-b-[green] border-l-[blue] ">
+    <div className="py-2 px-4 border-2 rounded-lg font-sans shadow-md  border-t-[blue] border-r-[purple] border-b-[green] border-l-[blue] ">
       {/* Header */}
       <div className="mb-6 grid grid-cols-2 items-center gap-2">
         {/* Text */}
@@ -33,9 +33,11 @@ const Dashboard = () => {
       </div>
 
       {/* Main Content */}
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-3 gap-6 items-center">
+
+
         {/* Focus Section */}
-        <div className="col-span-2 bg-white p-6 rounded-lg ">
+        <div className="col-span-2 bg-white p-2 rounded-lg ">
           <h2 className="text-gray-500 text-xs font-semibold mb-4">
             Copilot has pinpointed 20 key leads that show strong purchase intent
             and are actively engaging. These leads need your focus.
@@ -49,23 +51,23 @@ const Dashboard = () => {
         </div>
 
         {/* Sidebar */}
-        <div className="bg-white p-6 rounded-lg border border-r-0 border-t-0 border-b-0">
-          <h3 className="text-gray-700 font-semibold mb-2">
+        <div className="bg-white px-4 rounded-lg border border-r-0 border-t-0 border-b-0">
+          <h3 className="text-gray-700 font-semibold mb-1">
             Other key activities
           </h3>
-          <div className="space-y-4">
+          <div className="space-y-2">
             {/* Activity 1 */}
             <div className="border p-2 rounded-md ">
               <div className="flex items-center gap-1 mb-1">
                 <img
-                  src={`lead.profileImage`}
+                  src={`https://via.placeholder.com/150`}
                   alt={"placeholder"}
                   className="rounded-full w-6 h-6"
                 />
                 <div>
-                  <h3 className=" text-xs font-medium text-gray-800">
+                  <p className=" text-xs font-medium text-gray-800">
                     Café A00 for Woodland Bank
-                  </h3>
+                  </p>
                   <p className="text-xs text-gray-500">
                     Café A00 for Woodland Bank
                   </p>
@@ -80,9 +82,9 @@ const Dashboard = () => {
 
             {/* Activity 2 */}
             <div className="border p-2 rounded-md ">
-              <div className="flex items-center gap-1 mb-2">
+              <div className="flex items-center gap-1 mb-1">
                 <img
-                  src={`lead.profileImage`}
+                  src={`https://via.placeholder.com/150`}
                   alt={"placeholder"}
                   className="rounded-full w-6 h-6"
                 />

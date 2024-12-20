@@ -59,7 +59,7 @@ export default function NavLinks() {
     <>
       <nav className="p-4">
         {links.map((section, index) => (
-          <div key={index} className="mb-6">
+          <div key={index} className="mb-4">
             <h2 className="text-sm text-gray-500 font-semibold mb-2">
               {section.title}
             </h2>
@@ -67,7 +67,7 @@ export default function NavLinks() {
             {/* Section Links */}
             <ul>
               {section.links.map((link, idx) => (
-                <li key={idx} className="mb-2">
+                <li key={idx} className="mb-1">
                   <Link
                     href={link.href}
                     className={clsx(

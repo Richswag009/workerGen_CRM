@@ -45,12 +45,12 @@ interface TableProps {
         <div className="flex flex-col md:flex-row gap-4 mb-4">
           <input
             type="text"
-            placeholder="Search..."
+            placeholder="Sort,search and filter with coilot"
             className="w-full md:w-1/3 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-600"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <select
+          {/* <select
             className="w-full md:w-1/5 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-600"
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value)}
@@ -59,7 +59,7 @@ interface TableProps {
             <option value="New">New</option>
             <option value="Pending">Pending</option>
             <option value="created on">Created On</option>
-          </select>
+          </select> */}
         </div>
   
         {/* Table */}
@@ -105,7 +105,8 @@ interface TableProps {
                       index % 2 === 0 ? "bg-white" : "bg-gray-50"
                     }`}
                   >
-                    <td className="p-3 text-blue-600 hover:underline cursor-pointer">
+                    <td className="p-3 space-x-1 text-blue-600 hover:underline cursor-pointer">
+                      <input className="mr-1" value={row.name} type="checkbox"/>
                       {row.name}
                     </td>
                     <td className="p-3">{row.topic}</td>
