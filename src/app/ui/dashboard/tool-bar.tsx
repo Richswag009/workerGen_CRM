@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  ChartBarIcon,
-  ViewColumnsIcon,
-  PlusIcon,
-  ReceiptRefundIcon,
-  TrashIcon,
-  AdjustmentsVerticalIcon,
-  GlobeAmericasIcon,
-} from "@heroicons/react/16/solid";
+
 import { Tooltip } from "@mui/material";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import ViewListIcon from "@mui/icons-material/ViewList";
