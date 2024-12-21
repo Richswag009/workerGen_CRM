@@ -87,7 +87,7 @@ export const leadData = [
       intent: "High",
     },
     keyPoints: [
-      "Jane is a key decision maker and was browsing 'espresso machines' on First Coffee's website.",
+      "Jane is a key decision maker and was browsing 'espresso machines.",
       "Northwind Traders currently see $200M in revenue from their in-store coffee shops.",
       "Jane is looking to expand the coffee offerings in Northwind's corporate offices.",
     ],

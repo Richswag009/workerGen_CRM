@@ -23,7 +23,7 @@ export default function AgentModal({ isOpen, onClose }: Props) {
             <div className="fixed inset-0 flex items-center justify-center">
                 <Backdrop className="z-10 relative" open={isOpen} onClick={onClose} />
                 <div className="w-full lg:w-[900px] relative z-50 px-3 ">
-                    <div className="bg-[#f4f6f8] relative lg:max-w-4xl max-h-[calc(100vh-100px)] modal-container overflow-auto rounded-2xl px-10 p-6 z-40">
+                    <div className="bg-[#f4f6f8] relative lg:w-[900px] max-h-[calc(100vh-100px)] modal-container overflow-auto rounded-2xl px-6 md:px-10 p-6 z-40">
                         <div className="flex flex-col gap-4">
                             <div className="flex justify-end mb-10">
                                 <div onClick={onClose}>
@@ -35,8 +35,11 @@ export default function AgentModal({ isOpen, onClose }: Props) {
                                 <h1>Agent skill</h1>
                             </div>
                         </div>
-                        <div className="bg-white px-4 py-1 rounded-xl shadow mt-4">
-                            <CustomAccordion title="Check if on-hand inventory will allow all sales orders to ship without delay">
+                        <div className="bg-white px-4 py-1 rounded-xl shadow mt-2">
+                            <CustomAccordion
+                                title="Check if on-hand inventory will allow all sales orders to ship without delay"
+                                expanded={false}
+                            >
                                 <div className="text-sm leading-6">
                                     When <p className="bg-[#c1d8ec] px-2 py-1 inline-flex items-center gap-1 rounded-xl w-fit align-middle my-1">
                                         <Face6Icon sx={{ color: "#3e95e0" }} />
@@ -93,5 +96,3 @@ export default function AgentModal({ isOpen, onClose }: Props) {
         </Modal>
     )
 }
-
-

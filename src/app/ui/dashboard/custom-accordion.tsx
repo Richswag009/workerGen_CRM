@@ -7,10 +7,11 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 type Props = {
     children: ReactNode
     title: string
+    expanded?: boolean
 }
 
-export default function CustomAccordion({ children, title }: Props) {
-    const [allExpanded, setAllExpanded] = useState(true);
+export default function CustomAccordion({ children, title, expanded }: Props) {
+    const [allExpanded, setAllExpanded] = useState(expanded);
 
     const toggleAll = () => {
         setAllExpanded((prev) => !prev);

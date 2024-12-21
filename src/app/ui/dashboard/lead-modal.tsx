@@ -53,7 +53,7 @@ const LeadModal: React.FC<LeadModalProps> = ({
 
   return (
     <div className=" transition-opacity duration-300 ease-out   fixed inset-0 flex items-center justify-center  bg-opacity-50 z-50">
-      <div className="bg-white rounded-lg border-2 shadow-lg w-full lg:max-w-4xl modal-container max-h-[calc(100vh-100px)]  p-6 relative  border-t-[blue] border-r-[purple] border-b-[green] border-l-[blue] ">
+      <div className="bg-white rounded-lg border-2 shadow-lg w-full lg:max-w-4xl modal-container max-h-[calc(100vh-100px)] overflow-auto  border-t-[blue] border-r-[purple] border-b-[green] border-l-[blue] px-10 p-6">
         <div className="flex flex-row justify-between mb-4 items-center">
           <div className="flex flex-row items-center space-x-1">
             <MarkEmailUnreadIcon className="w-4 h-4" />
