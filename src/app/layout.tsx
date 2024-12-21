@@ -1,7 +1,13 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SideNav from "./ui/dashboard/sidenav";
+import { useState } from "react";
+import Navbar from "./ui/navbar";
+import { ThemeProvider } from '@mui/material/styles';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
+import theme from '../theme';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,19 +29,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
+   <AppRouterCacheProvider>
+         <ThemeProvider theme={theme}>
+              {children}       </ThemeProvider>
+          </AppRouterCacheProvider>
+        {/* <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
           <div className="w-full flex-none  md:w-40">
-            <SideNav />
+           <SideNav /> 
           </div>
           <div className="flex-grow p-2 md:overflow-y-auto md:p-4">
             {children}
           </div>
-        </div>
+        </div> */}
       </body>
     </html>
   );

@@ -1,6 +1,13 @@
 // 'use client'
 import { leadData } from "@/app/lib/placeholder-data";
+import { HomeIcon, LinkIcon } from "@heroicons/react/20/solid";
+import { PencilIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
+import {
+  ArrowLeftCircleIcon,
+  ArrowRightCircleIcon,
+} from "@heroicons/react/24/solid";
 import React, { useState } from "react";
 import SecurityIcon from "@mui/icons-material/Security";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
@@ -11,10 +18,6 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackwardIosIcon from "@mui/icons-material/ArrowBackIos";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
-import Image from "next/image";
-
-
 export interface LeadDetails {
   name: string;
   role: string;
@@ -53,10 +56,13 @@ const LeadModal: React.FC<LeadModalProps> = ({
 
   return (
     <div className=" transition-opacity duration-300 ease-out   fixed inset-0 flex items-center justify-center  bg-opacity-50 z-50">
-      <div className="bg-white rounded-lg border-2 shadow-lg w-full lg:max-w-4xl modal-container max-h-[calc(100vh-100px)]  p-6 relative  border-t-[blue] border-r-[purple] border-b-[green] border-l-[blue] ">
+
+
+      
+      <div className="bg-white rounded-lg border-2 shadow-lg w-full lg:max-w-3xl p-6 relative  border-t-[blue] border-r-[purple] border-b-[green] border-l-[blue] ">
         <div className="flex flex-row justify-between mb-4 items-center">
           <div className="flex flex-row items-center space-x-1">
-            <MarkEmailUnreadIcon className="w-4 h-4" />
+            <HomeIcon className="w-4 h-4" />
             <p>{lead.topic}</p>
           </div>
 
@@ -72,29 +78,17 @@ const LeadModal: React.FC<LeadModalProps> = ({
 
         {/* Header */}
         <div className="border border-1 border-gray-500 flex items-center rounded-md  mb-4 p-1">
-          <Image   src={lead.profileImage}
-            alt={lead.name}
-            className="h-8 w-8 rounded-full mr-2" height={32} width={32} />
+           <Image src="/cele1.svg" alt="" width={40} height={40} />
+            <p className="text-base font-semibold">{lead.name}</p>
 
-<div>
-          <p className="text-base font-semibold">{lead.name}</p>
-  <div className="flex flex-row items-center space-x-1">
-        
-              <Image
-                        src={"/linkedin.svg"}
-                        alt={"linkedin logo"}
-                        width={32}
-                        height={32}
-                        className="h-4 w-4 "
-                      />
-            <p className=" text-xs text-gray-600">{lead.role}</p>
-          </div>
-      
-
+            <div className="flex flex-row items-center space-x-1">
+              <LinkIcon className="w-4 h-4" />|
+              <p className=" text-xs text-gray-600">{lead.role}</p>
+            </div>
           </div>
         </div>
 
-       
+
 
 
         <div className="flex justify-between md:items-center w-full gap-3 bg-gradient-to-tr from-[#ebf3ff] to-[#ececfe] px-4 py-2 rounded-xl flex-col md:flex-row">
@@ -117,7 +111,7 @@ const LeadModal: React.FC<LeadModalProps> = ({
           </div>
         </div>
 
-  {/* Tabs */}
+        {/* Tabs */}
         <div className="flex border-b mb-2">
           <button
             onClick={() => setActiveTab("engage")}
@@ -151,7 +145,7 @@ const LeadModal: React.FC<LeadModalProps> = ({
               <div className="flex flex-col gap-2 md:gap-0">
                 {lead.keyPoints.map((keypoint, i) => {
                   return (
-                    <div key={i} className="flex items-center gap-1 ml-4">
+                    <div className="flex items-center gap-1 ml-4">
                       <div className="size-1 bg-black rounded-full hidden md:block"></div>
                       <p className="text-sm">{keypoint}</p>
                       <div className="bg-white size-2 flex items-center justify-center text-xs text-black">
@@ -244,8 +238,11 @@ const LeadModal: React.FC<LeadModalProps> = ({
           </div>
         )}
 
+        {/* About Section */}
+   
 
-<div className="border my-1 text-sm p-2 text-gray-700">
+     
+        <div className="border my-1 text-sm p-2 text-gray-700">
           <div className="flex flex-row justify-between items-center">
             <h3 className="font-medium mb-2">About {lead.name}</h3>
 
@@ -312,8 +309,8 @@ const LeadModal: React.FC<LeadModalProps> = ({
         </div>
 
 
-
       </div>
+      
     </div>
   );
 };

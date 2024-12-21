@@ -14,6 +14,7 @@ export type Invoice = {
     topic: string;
     status: string;
     createdOn: string;
+    keyPoints: string;
   };
   
 
@@ -32,4 +33,5 @@ export type Invoice = {
     };
     keyPoints: string[];
     about: string;
+    createdOn:string
   }
