@@ -6,7 +6,7 @@ import SideNav from "./ui/dashboard/sidenav";
 import { useState } from "react";
 import Navbar from "./ui/navbar";
 import { ThemeProvider } from '@mui/material/styles';
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
+// import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import theme from '../theme';
 
 const geistSans = Geist({
@@ -36,10 +36,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-   <AppRouterCacheProvider>
-         <ThemeProvider theme={theme}>
-              {children}       </ThemeProvider>
-          </AppRouterCacheProvider>
+
+              {children} 
         {/* <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
           <div className="w-full flex-none  md:w-40">
            <SideNav /> 
