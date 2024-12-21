@@ -5,7 +5,11 @@ import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 
 
-export default function SideNav({ openModal }) {
+interface Props{
+  openModal:()=>void
+}
+
+export default function SideNav({openModal}:Props){
   const [isOpen, setIsOpen] = useState(true);
   return (
     <div className="bg-gray-100 pb-6 w-full shadow-lg h-[calc(100vh-40px)] border-r-2 border-r-gray-200 overflow-scroll">
