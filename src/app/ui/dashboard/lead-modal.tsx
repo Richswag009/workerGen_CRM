@@ -51,9 +51,9 @@ const LeadModal: React.FC<LeadModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className=" transition-opacity duration-300 ease-out   fixed inset-0 flex items-center justify-center  bg-opacity-50 z-50">
+    <div className=" transition-opacity duration-300 ease-out m-4 fixed inset-4 flex items-center justify-center  bg-opacity-50 z-50">
       <div className="relative">
-        <div className="bg-white rounded-lg border-2 shadow-lg w-full lg:w-4xl modal-container max-h-[calc(100vh-100px)] overflow-auto  border-t-[blue] border-r-[purple] border-b-[green] border-l-[blue] px-10 p-6">
+        <div className="bg-white rounded-lg border-2 shadow-lg w-full lg:w-4xl modal-container max-h-[calc(100vh-100px)] overflow-auto  border-t-[blue] border-r-[purple] border-b-[green] border-l-[blue] px-4 p-2 lg:px-10 lg:p-6">
           <div className="flex flex-row justify-between mb-4 items-center">
             <div className="flex flex-row items-center space-x-1">
               <MarkEmailUnreadIcon className="w-4 h-4" />
@@ -141,8 +141,8 @@ const LeadModal: React.FC<LeadModalProps> = ({
 
           {/* Content */}
           {activeTab === "engage" ? (
-            <div className="bg-white px-4 py-4 rounded-xl shadow mt-2">
-              <div className="bg-gradient-to-tr from-[#ebf3ff] to-[#ececfe] px-4 py-4 rounded-xl">
+            <div className="bg-white p-2 md:px-4 md:py-4 rounded-xl shadow mt-2">
+              <div className="bg-gradient-to-tr from-[#ebf3ff] to-[#ececfe] p-2 md:px-4 md:py-4 rounded-xl">
                 <h5 className="text-sm font-bold bg-gradient-to-r from-[#5373d4] to-[#7e47ec] bg-clip-text text-transparent mb-2">
                   Why I picked this lead
                 </h5>
@@ -310,13 +310,13 @@ const LeadModal: React.FC<LeadModalProps> = ({
             </div>
           </div>
 
-          <div className="absolute hidden -left-6 z-50 transform -translate-y-1/2 top-1/2 bg-white size-14 shadow-2xl lg:flex items-center justify-center rounded-full border-2 border-gray-200 cursor-pointer">
+          <div className="absolute -left-8 z-50  transform -translate-y-1/2 top-1/2 bg-white size-9 md:size-14 shadow-2xl lg:flex items-center justify-center text-center rounded-full border-2 border-gray-200 cursor-pointer">
             <ArrowBackwardIosIcon
               sx={{ color: "blue" }}
               onClick={handlePrevious}
             />
           </div>
-          <div className="absolute hidden -right-8 z-50  transform -translate-y-1/2 top-1/2 bg-white size-14 shadow-2xl lg:flex items-center justify-center rounded-full border-2 border-gray-200 cursor-pointer">
+          <div className="absolute  -right-8 z-50  transform -translate-y-1/2 top-1/2 bg-white size-9 md:size-14 shadow-2xl lg:flex items-center justify-center text-center rounded-full border-2 border-gray-200 cursor-pointer">
             <ArrowForwardIosIcon sx={{ color: "blue" }} onClick={handleNext} />
           </div>
         </div>
