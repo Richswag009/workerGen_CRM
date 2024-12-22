@@ -18,7 +18,7 @@ const Dashboard = () => {
   const [currentLeadIndex, setCurrentLeadIndex] = useState(0);
 
   return (
-    <div className="py-2 px-4 border-2 bg-white rounded-lg font-sans shadow-md  border-t-[blue] border-r-[purple] border-b-[green] border-l-[blue] ">
+    <div className=" px-2 py-1 md:py-2 md:px-4 border-2 bg-white rounded-lg font-sans shadow-md  border-t-[blue] border-r-[purple] border-b-[green] border-l-[blue] ">
       {/* Header */}
       <div className="flex flex-col justify-start mb-6 lg:grid lg:grid-cols-2 lg:items-center gap-2">
         {/* Text */}
@@ -38,7 +38,7 @@ const Dashboard = () => {
         </div>
 
         {/* Progress Bar */}
-        <div className="flex flex-row space-x-1">
+        <div className="flex flex-col md:flex-row space-x-1">
           <ProgressBar />
           <div className="flex justify-center">
             {isOpen ? (

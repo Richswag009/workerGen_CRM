@@ -67,7 +67,7 @@ const ProgressBar = () => {
           className="flex items-center py-1 px-1 space-x-1  text-xs"
         >
           <span
-            className="w-2 h-2 rounded-full"
+            className={`w-2 h-2 rounded-full ${segment.color}`}
             style={{ backgroundColor: segment.color }}
           ></span>
           <span className=" text-xs font-medium">
