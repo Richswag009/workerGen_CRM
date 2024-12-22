@@ -10,24 +10,19 @@ const ProgressBar = () => {
   const target = 45; // Target in millions
   const progressData: ProgressSegment[] = [
 
-        { label: "Won", value: 18, color: "#69b34c" },
-        { label: "Committed", value: 8, color: "#7dbde8" },
-        { label: "Best case", value: 7, color: "#ffcc00" },
-        { label: "Qualified", value: 3, color: "#ff6666" },
-        { label: "Leads", value: 75, color: "#d3d3d3" },
-      
+    { label: "Won", value: 18, color: "bg-green-400" },
+    { label: "Committed", value: 8, color: "bg-blue-400" },
+    { label: "Best case", value: 7, color: "bg-purple-400" },
+    { label: "Qualified", value: 3, color: "bg-orange-400" },
+    { label: "Leads", value: 75, color: "bg-gray-300" },
   ];
 
 //   const totalAchieved = progressData.reduce((sum, segment) => sum + segment.value, 0);
 
   const totalAchieved = progressData.reduce((total, segment) => total + segment.value, 0);
 
-  const percentageAchieved = Math.round((totalAchieved / target) * 100);
+  const percentageAchieved =68
 
-  const desiredPercentage = 68;
-
-  // Calculate the scaling factor to make the total value equal to 68% of the desired maximum
-  const scalingFactor = (desiredPercentage / 100) * 100 / totalAchieved;
 
 
   return (
@@ -44,21 +39,28 @@ const ProgressBar = () => {
     </div>
   
     {/* Progress Bar */}
-    <div className="relative w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+    <div className="relative flex w-full h-2 bg-gray-200 rounded-full overflow-hidden">
       {progressData.map((segment, index) => (
         <div
           key={index}
-          className="h-full"
+          className={`${segment.color} h-full`}
           style={{
-            width: `${(segment.value * scalingFactor)}%`,   // Calculating percentage width
+            width: `${(segment.value/totalAchieved)*100}%`,   // Calculating percentage width
             backgroundColor: segment.color,  // Setting segment color
           }}
         ></div>
+        
       ))}
+        <div
+          className="absolute top-0 h-full border-l-2 border-gray-800"
+          style={{
+            left: `${percentageAchieved}%`,
+          }}
+        ></div>
     </div>
   
     {/* Legend */}
-    <div className="flex flex-wrap text-sm text-gray-600 gap-1">
+    <div className="flex flex-wrap text-xs text-gray-600 gap-1">
       {progressData.map((segment, index) => (
         <div
           key={index}
@@ -69,7 +71,7 @@ const ProgressBar = () => {
             style={{ backgroundColor: segment.color }}
           ></span>
           <span className=" text-xs font-medium">
-            {segment.label} - ${segment.value}m
+            {segment.label} -${segment.value}m
           </span>
         </div>
       ))}
